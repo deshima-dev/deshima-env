@@ -1,0 +1,36 @@
+{
+    "name": "deshima-env",
+    "image": "python:3.11",
+    "runArgs": [
+        "--name=deshima-env"
+    ],
+    "containerEnv": {
+        "POETRY_VIRTUALENVS_CREATE": "false"
+    },
+    "onCreateCommand": "pip install poetry==1.8.3",
+    "postCreateCommand": "poetry install",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "github.vscode-pull-request-github",
+                "mhutchie.git-graph",
+                "ms-python.black-formatter",
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "streetsidesoftware.code-spell-checker",
+                "tamasfe.even-better-toml"
+            ],
+            "settings": {
+                "files.insertFinalNewline": true,
+                "files.trimTrailingWhitespace": true,
+                "[python]": {
+                    "editor.defaultFormatter": "ms-python.black-formatter",
+                    "editor.formatOnSave": true,
+                    "editor.insertSpaces": true,
+                    "editor.tabSize": 4,
+                    "python.languageServer": "Pylance"
+                }
+            }
+        }
+    }
+}
