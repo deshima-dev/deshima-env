@@ -8,7 +8,8 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.9, <3.13"
-decode = "^2.12"
+decode = "^2024.7.0"
+demerge = "^2024.7.2"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.4"
