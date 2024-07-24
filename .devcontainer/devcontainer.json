@@ -1,13 +1,17 @@
 {
     "name": "deshima-env",
-    "image": "python:3.11",
-    "runArgs": [
-        "--name=deshima-env"
-    ],
+    "image":"python:3.11",
+    "features": {
+        "ghcr.io/devcontainers-contrib/features/poetry:2": {
+            "version": "1.8.3"
+        }
+    },
     "containerEnv": {
         "POETRY_VIRTUALENVS_CREATE": "false"
     },
-    "onCreateCommand": "pip install poetry==1.8.3",
+    "runArgs": [
+        "--name=deshima-env"
+    ],
     "postCreateCommand": "poetry install",
     "customizations": {
         "vscode": {
@@ -16,7 +20,6 @@
                 "mhutchie.git-graph",
                 "ms-python.black-formatter",
                 "ms-python.python",
-                "ms-toolsai.jupyter",
                 "streetsidesoftware.code-spell-checker",
                 "tamasfe.even-better-toml"
             ],
