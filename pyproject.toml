@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "deshima-env"
-version = "2024.7.1"
+version = "2024.8.0"
 description = "Environment for DESHIMA reduction and analysis"
 authors = ["Akio Taniguchi <taniguchi@a.phys.nagoya-u.ac.jp>"]
 license = "MIT"
@@ -8,8 +8,8 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.9, <3.13"
-decode = "^2024.7.0"
-demerge = "^2024.7.2"
+decode = "^2024.8"
+demerge = "^2024.8"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.4"
